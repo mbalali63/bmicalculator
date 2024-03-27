@@ -1,13 +1,204 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root{
+  --main-color: #3AAFA9;
+  --font-color: #000;
+  --contrast-font-color:#fff;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+.App{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  justify-items: stretch;  
+  background-color: #D9D9D9;
+  max-width: 100%;
+  gap:0;
+}
+#header-panel{
+  width: 100%;  
+  background-color: var(--main-color);
+  grid-column: 1/3;
+}
+h1{
+  color:var(--contrast-font-color);  
+  text-align: center;
+  padding: 30px 0;
+  justify-items:start;
+  font-family: "Just Me Again Down Here", cursive;
+  font-size: 48px;
+}
+
+
+#info-panel{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  justify-items: start;
+  padding: 20px 50px 40px 50px;
+  gap:35px;
+  background-color: var(--main-color);
+  grid-column: 1/3;
+}
+
+#info-panel label{
+  width: 100%;
+}
+
+#info-panel select{
+  width:110%;
+}
+#info-panel p{
+  display: none;
+}
+#info-panel input{
+  border:1px solid red;
+  background-color: red;
+}
+
+#param-panel{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-items: start;
+    padding: 26px 31px 40px 50px;
+    gap:35px;
+    background-color: var(--main-color);
+    grid-column: 1/3;
+  }
+
+#param-panel input{
+  width:90%;
+}
+
+#graphic-panel{
+  /*width: 190px;*/
+  height: 210px;
+  grid-column: 1/2;
+  background-color: var(--main-color);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  gap:0;
+  
+}
+
+#body-symobol img{
+  width: 100px;
+  margin:0 10px;
+}
+
+#ruler{  
+  width:35px;
+  height:164px;
+  overflow: hidden;
+  background: rgb(252,179,46);
+  background: linear-gradient(90deg, rgba(252,179,46,1) 0%, rgba(255,207,38,1) 100%); 
+}
+
+.ruler-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  border-bottom: 2px solid #000;
+  padding: 4px 0;    
+}
+
+.ruler-section ul{
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  
+}
+
+.ruler-section ul li{  
+  height: 3px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  padding-right: 5px;
+  overflow: visible;
+  font-size: 8px;
+}
+
+.minor-line{
+  background-color: #000;
+  width: 10px;
+  height: 1px;
+}
+
+.major-line{
+  background-color: #000;
+  width: 15px;
+  height: 1px;  
+}
+
+#weight-scale{
+  width: 63px;
+  height: 30px;
+  overflow: hidden;
+  margin:0 auto;
+  transform: rotate(180deg);  
+}
+#weight-scale img{
+  width: 100%;
+}
+
+#bmi-indicator-panel{
+  background-color: var(--main-color);
+}
+
+#bmi-indicator-panel label{
+  margin-left:20px;
+}
+
+#bmi-para{
+  width:139px;
+  height: 36px;
+  margin-left: 20px;
+  margin-top: 16px;
+  background-color: var(--contrast-font-color);
+}
+
+#bmi-map{
+  width: 139px;
+  height: 26px;
+  margin-left: 20px;
+  margin-top: 15px;
+  background:linear-gradient(to right,#38FF40,#F13A00);
+}
+
+footer{
+  width:100%;
+  height: 25px;
+  background-color: #17252A;
+  grid-column: 1/3;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  color: #fff;;
+}
+
+footer a{
+  text-decoration: none;
+  color:#fff;
+  font-size: 10px;
 }

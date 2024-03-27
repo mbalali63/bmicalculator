@@ -1,3 +1,39 @@
+# BMI Calculator
+
+## Introduction
+  This app is created using React. My main purpose is for practice the latest skills I have learnt. The app is just for adults.
+
+
+
+
+## Components
+The following components will be included in this app:
+<ul>
+    <li>app: this is the main component, and container of all other components</li>
+    <li>Header</li>
+    <li>infoPanel: this componet includes few input elements and is responsible to get user general information</li>
+    <li>paramPanel: this component includes few input elements to receive user weight, and height</li>
+    <li>graphicPanel: this component is responsible to:
+    <ol>
+        <li>show the user symbolic body image</li>
+        <li>get user weight and height by draging handles on the image.</li>     
+    </ol>
+    <li>bmiIndicatorPanel: this panel will show the calculated BMI numerically and also graphically.</li>
+</ul>
+
+## Usestates:
+<ol>
+    <li>gender</li>
+    <li>isAdult</li>
+    <li>weight</li>
+    <li>height</li>
+    <li>bmi</li>
+</ol>
+
+## Functionality:
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
